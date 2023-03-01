@@ -1,0 +1,29 @@
+body{
+    background-color: peachpuff;
+}
+
+.dashboard-wrapper{
+    color: red;
+    display: grid;
+    height: calc(100vh - 2rem);
+    padding: 1rem 0.25rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5fr 5fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-wrapper > div{
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-event{
+    background: blue;
+    grid-row-end: span 2;
+}
