@@ -3,7 +3,6 @@ body{
 }
 
 .dashboard-wrapper{
-    color: red;
     display: grid;
     height: calc(100vh - 2rem);
     padding: 1rem 0.25rem;
