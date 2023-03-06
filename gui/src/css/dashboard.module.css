@@ -1,5 +1,5 @@
 body{
-    background-color: peachpuff;
+    background-color: white;
 }
 
 .dashboard-wrapper{
@@ -20,9 +20,20 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.dashboard-wrapper > div:hover{
+    
 }
 
 .dashboard-event{
     background: blue;
     grid-row-end: span 2;
+}
+
+.dashboard-humidity{
+    background: url('../icons/rain.png') white;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgb(13, 15, 158);
 }

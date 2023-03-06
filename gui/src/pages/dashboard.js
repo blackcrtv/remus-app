@@ -12,7 +12,7 @@ const Dashboard = () => {
             </div>
             <div className={classes['dashboard-event']}>Event</div>
             <div>Presence</div>
-            <div className={classes['dashboard-thermometre']}>
+            <div className={classes['dashboard-humidity']}>
                 <Humidity></Humidity>
             </div>
             <div>Gas</div>
