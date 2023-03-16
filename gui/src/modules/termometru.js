@@ -14,7 +14,7 @@ const ModulTermometru = () => {
                 size="large"
                 height="300"
             />
-            <label>100°C</label>
+            <label className={classes['thermo-label']}>100°C</label>
         </div>
     )
 }

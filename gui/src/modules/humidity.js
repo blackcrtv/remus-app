@@ -8,7 +8,7 @@ const Humidity = ()=>{
     return(
         <div className={classes['humidity-wrapper']}>
             {/* <HumidityChart></HumidityChart> */}
-            <div className={`${pieClass["pie"]} ${pieClass["animate"]}`} style={{"--p" :value , "--c":"lightgreen"}}> {value}%</div>
+            <div className={`${pieClass["pie"]} ${pieClass["animate"]} ${classes['pie-wrapper']}`} style={{"--p" :value , "--c":"lightgreen"}}> {value}%</div>
         </div>
     )
 }

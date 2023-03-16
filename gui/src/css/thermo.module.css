@@ -1,8 +1,25 @@
 .thermo-wrapper{
     display: flex;
-    gap: 2rem;
+    width: 100%;
+    margin-left: 3.5rem;
+    gap: 1rem;
     padding: 0.5rem 0.25rem;
     justify-content: center;
     align-items: center;
     margin-bottom: calc(100% - (100% - 1vh));
+}
+
+.thermo-label{
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    font-size: 17px;
+    color: white;
+    width: 5rem;
+    box-sizing: border-box;
+    padding: 0.25rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(78, 91, 117);
+    box-shadow: 3px 2px 4px rgba(26, 26, 94, 0.623);
 }

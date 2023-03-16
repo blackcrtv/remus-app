@@ -28,12 +28,32 @@ body{
 }
 
 .dashboard-event{
-    background: blue;
+    /* background: blue; */
     grid-row-end: span 2;
 }
 
 .dashboard-humidity{
-    background: url('../icons/rain.png') white;
-    background-color: rgba(0, 0, 0, 0.3);
+    background: url('/public/icons/rain.png');
+    background-color: rgba(198, 212, 221, 0.3);
     color: rgb(13, 15, 158);
+}
+
+.dashboard-thermometre{
+    background: url('/public/icons/temp.png');
+    background-size: 650px;
+    background-repeat: round;
+    background-origin: content-box;
+    background-color: rgba(172, 157, 157, 0.205);
+    color: rgb(13, 15, 158);
+}
+
+.dashboard-presence{
+    background: #f6fff8;
+}
+
+.dashboard-gas{
+    background: url('/public/icons/gas.png') rgba(233, 223, 223, 0.3);
+    background-origin: content-box;
+    background-repeat: round;
+
 }
