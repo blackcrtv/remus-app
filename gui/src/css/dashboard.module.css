@@ -40,11 +40,12 @@ body{
 
 .dashboard-thermometre{
     background: url('/public/icons/temp.png');
-    background-size: 650px;
-    background-repeat: round;
-    background-origin: content-box;
+    background-size: 450px;
+    background-repeat: no-repeat;
+    /* background-origin: content-box; */
+    background-position: center;
     background-color: rgba(172, 157, 157, 0.205);
-    color: rgb(13, 15, 158);
+    /* color: rgb(13, 15, 158); */
 }
 
 .dashboard-presence{
