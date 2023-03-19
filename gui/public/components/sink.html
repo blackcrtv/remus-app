@@ -1,0 +1,176 @@
+<style>
+    * {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+    }
+
+    .background {
+        background-color: white;
+    }
+
+    .container {
+        top: -100px;
+        width: 500px;
+        height: 500px;
+    }
+
+    .body {
+        background-color: white;
+    }
+
+    .water>.waterColors {
+        position: relative;
+        top: 200px;
+        left: 50px;
+        width: 25px;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .water>.waterColors>.waterColor {
+        position: inherit;
+        top: 0%;
+        left: -20%;
+        width: 140%;
+        height: 120%;
+        background-image: linear-gradient(0deg, #31adff 25%, #007bcc 25%, #007bcc 25%, #007bcc 50%, #31adff 50%, #31adff 50%, #31adff 75%, #007bcc 75%);
+        background-position: 0px 0px;
+        background-repeat: repeat-y;
+        animation: waterDrop 30s linear infinite;
+        transform: rotate(180deg);
+    }
+
+    .tapMouth {
+        width: 50px;
+        height: 10px;
+        top: -90px;
+        left: 100px;
+        background: #7e7f7f;
+    }
+
+    .tapNeck1 {
+        width: 140px;
+        height: 50px;
+        border-radius: 0px 180px 0px 0px;
+        top: -150px;
+        left: 35px;
+        background: #c9cccb;
+    }
+
+    .tapNeck2 {
+        width: 50px;
+        height: 300px;
+        border-radius: 180px 0px 0px 0px;
+        top: 100px;
+        left: -150px;
+        background: #c9cccb;
+    }
+
+    .tapNeck3 {
+        width: 50px;
+        height: 50px;
+        top: -80px;
+        left: -50px;
+        background: #c9cccb;
+    }
+
+    .tapNeck3Cover {
+        width: 25px;
+        height: 50px;
+        top: -50px;
+        left: -75px;
+        border-radius: 180px 0px 0px 0px;
+        background: white;
+    }
+
+    .tapNeck3Cover2 {
+        width: 25px;
+        height: 50px;
+        top: -50px;
+        left: -25px;
+        background: white;
+    }
+
+    .glass {
+        width: 75px;
+        height: 100px;
+        top: 300px;
+        left: 100px;
+        border: 5px solid grey;
+        border-top: none;
+        background: #c9cccb;
+        opacity: 0.4;
+    }
+
+    .glassReflect {
+        position: absolute;
+        left: 160px;
+        top: 300px;
+        width: 5px;
+        height: 75px;
+        border-radius: 50px;
+        background: white;
+        opacity: 0.3;
+    }
+
+    .waterGlass {
+        left: 100px;
+        width: 75px;
+        height: 90px;
+        background: #31adff;
+        animation-duration: 1s;
+        animation-name: waterRise;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease;
+    }
+
+    .ground {
+        width: 300px;
+        height: 50px;
+        top: 450px;
+        border-radius: 50px 50px 0px 0px;
+        background: #727f79;
+    }
+
+    @keyframes waterDrop {
+        to {
+            background-position: 0 -1000vh;
+        }
+    }
+
+    @keyframes waterRise {
+        from {
+            top: 310px;
+        }
+
+        to {
+            top: 350px;
+        }
+    }
+</style>
+<div class="body">
+    <div class="container">
+        <div class="water">
+            <div class="waterColors">
+                <div class="waterColor"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="tapMouth"></div>
+        <div class="tapNeck1"></div>
+        <div class="tapNeck2"></div>
+        <div class="tapNeck3"></div>
+        <div class="tapNeck3Cover"></div>
+        <div class="tapNeck3Cover2"></div>
+        <div class="waterGlass"></div>
+        <div class="glass"></div>
+        <div class="glassReflect"></div>
+        <div class="ground"></div>
+    </div>
+</div>

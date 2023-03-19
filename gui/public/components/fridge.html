@@ -1,0 +1,85 @@
+<style>
+    .refrigerator {
+        width: 400px;
+        height: 700px;
+        background-color: #EEE;
+        position: relative;
+        border-radius: 10px;
+    }
+
+    .door {
+        width: 70%;
+        height: 80%;
+        background-color: #FFF;
+        position: absolute;
+        top: 10%;
+        left: 15%;
+        border-radius: 10px;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+        transform-origin: left;
+        animation: open-close 4s ease-in-out infinite;
+    }
+
+    .handle {
+        width: 10px;
+        height: 40px;
+        background-color: #EEE;
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        transform: translateY(-50%);
+        border-radius: 5px;
+    }
+
+    .body {
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        background-color: #CCC;
+        border-radius: 10px;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .shelf {
+        width: 80%;
+        height: 10%;
+        background-color: #FFF;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .shelf:nth-child(2) {
+        top: 40%;
+    }
+
+    .shelf:nth-child(3) {
+        top: 70%;
+    }
+
+    @keyframes open-close {
+
+        0%,
+        100% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateY(-120deg);
+        }
+    }
+</style>
+
+<div class="refrigerator">
+    <div class="door">
+        <div class="handle"></div>
+    </div>
+    <div class="body">
+        <div class="shelf"></div>
+        <div class="shelf" style="top: 40%;"></div>
+        <div class="shelf" style="top: 70%;"></div>
+    </div>
+</div>

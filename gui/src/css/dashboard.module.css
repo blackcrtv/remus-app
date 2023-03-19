@@ -28,7 +28,7 @@ body{
 }
 
 .dashboard-event{
-    /* background: blue; */
+    background: #e4e3d1;
     grid-row-end: span 2;
 }
 
@@ -39,7 +39,7 @@ body{
 }
 
 .dashboard-thermometre{
-    background: url('/public/icons/temp.png');
+    /* background: url('/public/icons/temp.png'); */
     background-size: 450px;
     background-repeat: no-repeat;
     /* background-origin: content-box; */

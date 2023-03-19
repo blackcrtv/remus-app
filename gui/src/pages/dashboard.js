@@ -15,7 +15,9 @@ const Dashboard = () => {
             <div className={classes['dashboard-event']}>
                 <Event></Event>
             </div>
-            <div className={classes['dashboard-presence']}><Presence></Presence></div>
+            <div className={classes['dashboard-presence']}>
+                <Presence></Presence>
+            </div>
             <div className={classes['dashboard-humidity']}>
                 <Humidity></Humidity>
             </div>

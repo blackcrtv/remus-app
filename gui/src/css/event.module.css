@@ -1,0 +1,31 @@
+.event_icon{
+    color: #146C94;
+}
+
+.event_animated{
+    animation: event-animation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.coffe-event{
+    border: none;
+    width: 54%;
+    height: 50%;
+}
+
+.sink-event{
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes event-animation{
+	from { 
+        transform: scale(1);
+	}
+	to{
+        transform: scale(1.2);
+	}
+}
