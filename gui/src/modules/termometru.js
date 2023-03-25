@@ -1,20 +1,19 @@
 import Thermometer from 'react-thermometer-component';
 import classes from '../css/thermo.module.css'
 
-const ModulTermometru = () => {
-
+const ModulTermometru = (props) => {
     return (
         <div className={classes['thermo-wrapper']}>
             <Thermometer
                 theme="light"
-                value="100"
+                value={props.temp}
                 max="100"
                 steps="3"
                 format="°C"
                 size="large"
                 height="300"
             />
-            <label className={classes['thermo-label']}>100°C</label>
+            <label className={classes['thermo-label']}>{props.temp}°C</label>
         </div>
     )
 }

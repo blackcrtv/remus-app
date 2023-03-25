@@ -1,13 +1,16 @@
 .gas-label{
-    background-color: rgba(54, 52, 54, 0.137);
-    display: inline-block;
-    width: 6rem;
+    background-color: rgba(54, 52, 54, 0.404);
+    display: flex;
+    width: 7rem;
+    height: 3.5rem;
     text-align: center;
-    font-size: 25px;
+    font-size: 27px;
     font-weight: bold;
     color: white;
     box-sizing: border-box;
     padding: 0.25rem;
     border-radius: 10px;
     border: none;
+    place-items: center;
+    justify-content: center;
 }

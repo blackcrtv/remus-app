@@ -1,11 +1,23 @@
 import classes from '../css/event.module.css';
 
-const Event = (props)=>{
-    return(<>
-        {/* <img src='/components/fridge.gif' alt="loading..." width="600" height="500"/> */}
-        <iframe src='components/coffe-mug.html' className={classes['sink-event']}></iframe> 
-        {/* <iframe src='components/sink.html' className={classes['sink-event']}></iframe>  */}
-        {/* <iframe src='components/coffe.html' className={classes['coffe-event']}></iframe>  */}
+const Event = (props) => {
+    if (props.event === 'sink_on') {
+        return (
+            <iframe src='components/sink.html' className={classes['sink-event']}></iframe>
+        )
+    }
+    if (props.event === 'refrigerator') {
+        return (
+            <img src='/components/fridge.gif' alt="loading..." width="600" height="500" />
+        )
+    }
+    if (props.event === 'coffee_cup') {
+        return (
+            <iframe src='components/coffe.html' className={classes['coffe-event']}></iframe>
+        )
+    }
+    return (<>
+        <iframe src='components/no-event.html' className={classes['sink-event']}></iframe>
     </>
     )
 }
