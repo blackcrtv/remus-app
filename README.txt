@@ -13,3 +13,9 @@ Format:
     "gasRes": 234,
     "event" : "sink_on"
 }
+
+```#Din calea remus-app/gui 
+npm run build 
+#in calea remus-app/server 
+ copy build folder
+```
