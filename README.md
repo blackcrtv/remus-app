@@ -22,3 +22,9 @@ In calea remus-app/server
 ```
  copiaza "build" folder
 ```
+
+Din calea remus-app/server se porneste serverul
+```
+npm start
+```
+
