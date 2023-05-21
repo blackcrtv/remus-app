@@ -11,7 +11,7 @@ Format:
     "hum" : 23, 
     "pres" : 0,
     "gasRes": 234,
-    "event" : "sink_on"
+    "event" : 0
 }
 
 Din calea remus-app/gui 
