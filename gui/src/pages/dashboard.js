@@ -16,18 +16,23 @@ const Dashboard = () => {
 
     const [data, setData] = useState(null);
 
+    const handleClientData = (data) => {
+        if (data)
+            setData(data)
+    };
+
     useEffect(() => {
-        setData({
-            "temp": 26.3,
-            "hum": 23,
-            "pres": true,
-            "gasRes": 2342,
-            "event": "sink_on"
-        })
-        socket.on('message', (data) => {
-            console.log(`Received message from server: ${data}`);
-        });
-        socket.emit('message', 'Connected');
+        // setData({
+        //     "temp": 26.3,
+        //     "hum": 23,
+        //     "pres": true,
+        //     "gasRes": 2342,
+        //     "event": "sink_on"
+        // })
+        socket.on('clientData', handleClientData);
+        return () => {
+            socket.off('clientData', handleClientData);
+        }
     }, [])
 
     if (!data) {

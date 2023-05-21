@@ -1,33 +1,33 @@
-const dgram = require('dgram');
+const net = require('net');
 
-const server = dgram.createSocket('udp4');
+const TCP_PORT = 8090;
+const serverAddress = 'localhost'; // Replace with the server address if necessary
 
-const currentPort = 5000; // Replace with the current port number
-const newPort = 3001; // Replace with the new port number you want to use
+const message = JSON.stringify({
+  "temp": 26.3,
+  "hum": 33,
+  "pres": false,
+  "gasRes": 2342,
+  "event": 3
+})
 
-const message = 'Hello, world!';
+const client = net.createConnection({ port: TCP_PORT, host: serverAddress }, () => {
+  console.log('Connected to the TCP server');
 
-server.on('error', (err) => {
-  console.error(err);
+  // Send a message to the server
+  const messageToSend = 'Hello, server!';
+  client.write(message);
 });
 
-server.on('close', () => {
-  console.log('Socket closed');
+// Handle data received from the server
+client.on('data', (data) => {
+  console.log(`Received data from server: ${data}`);
+  // Process the received data or perform any other actions
+  // ...
 });
 
-server.on('message', (msg, rinfo) => {
-  console.log(`Received message "${msg}" from ${rinfo.address}:${rinfo.port}`);
+// Handle server connection closed
+client.on('end', () => {
+  console.log('Disconnected from the TCP server');
 });
 
-server.bind(currentPort, () => {
-  console.log(`Server listening on port ${currentPort}`);
-
-  server.send(message, newPort, (err) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-
-    console.log(`Sent message "${message}" to port ${newPort}`);
-  });
-});
