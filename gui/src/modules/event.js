@@ -8,7 +8,7 @@ const Event = (props) => {
     }
     if (props.event === 'refrigerator') {
         return (
-            <img src='/components/fridge.gif' alt="loading..." width="600" height="500" />
+            <img src='/components/fridge.gif' alt="loading..." width="100%" height="80%" />
         )
     }
     if (props.event === 'coffee_cup') {

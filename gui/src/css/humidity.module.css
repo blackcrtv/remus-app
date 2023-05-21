@@ -1,10 +1,16 @@
 .humidity-wrapper{
     color: black;
-    background-color: rgba(198, 212, 221, 0.733);
-    border-radius: 50%;
+    justify-self: center;
 }
 
 .pie-wrapper{
+    display: grid;
+    background-color: rgba(198, 212, 221, 0.733);
     border-radius: 50%;
-    box-shadow: 5px 5px 15px #555353bd;
+    color:rgb(2, 2, 85);
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 50%;
+    box-shadow: 6px 6px 17px #555353bd;
+    text-shadow: 1px 1px 1px rgb(4, 3, 53);
 }

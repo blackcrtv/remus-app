@@ -1,12 +1,12 @@
 .thermo-wrapper{
     display: flex;
     width: 100%;
-    margin-left: 3.5rem;
+    /* margin-left: 3.5rem; */
     gap: 1rem;
     padding: 0.5rem 0.25rem;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(100% - (100% - 1vh));
+    margin-bottom: calc(100% - (100% - 8vh));
 }
 
 .thermo-label{

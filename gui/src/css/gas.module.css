@@ -14,3 +14,8 @@
     place-items: center;
     justify-content: center;
 }
+
+.gas-wrapper{
+    display: flex;
+    justify-content: center;
+}
