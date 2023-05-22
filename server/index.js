@@ -64,7 +64,7 @@ function processData(data) {
     let dataJson = JSON.parse(data.toString());
     return {
         ...dataJson,
-        event: MAPPER_EVENT[dataJson.event ?? 0]
+        event: MAPPER_EVENT[dataJson.event] ?? 'no_event'
     }
 }
 
