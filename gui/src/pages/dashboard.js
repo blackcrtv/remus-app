@@ -22,13 +22,13 @@ const Dashboard = () => {
     };
 
     useEffect(() => {
-        setData({
-            "temp": 26.3,
-            "hum": 23,
-            "pres": false,
-            "gasRes": 2342,
-            "event": "no"
-        })
+        // setData({
+        //     "temp": 26.3,
+        //     "hum": 23,
+        //     "pres": false,
+        //     "gasRes": 2342,
+        //     "event": "no"
+        // })
         socket.on('clientData', handleClientData);
         return () => {
             socket.off('clientData', handleClientData);
