@@ -12,6 +12,13 @@ import { useEffect, useState } from 'react';
 
 const socket = io('http://localhost:3000');
 
+const MAPPER_EVENTS = {
+    no_event: "There is no event running",
+    sink_on: "The faucet is running",
+    refrigerator: "The refrigerator door is open",
+    coffee_cup: "The coffee machine is preparing an espresso"
+}
+
 const Dashboard = () => {
 
     const [data, setData] = useState(null);
@@ -22,13 +29,13 @@ const Dashboard = () => {
     };
 
     useEffect(() => {
-        // setData({
-        //     "temp": 26.3,
-        //     "hum": 23,
-        //     "pres": false,
-        //     "gasRes": 2342,
-        //     "event": "no"
-        // })
+        setData({
+            "temp": 26.3,
+            "hum": 23,
+            "pres": false,
+            "gasRes": 2342,
+            "event": "coffee_cup"
+        })
         socket.on('clientData', handleClientData);
         return () => {
             socket.off('clientData', handleClientData);
@@ -55,6 +62,7 @@ const Dashboard = () => {
                 <div className={classes['eight']}>
                     <h1>Event</h1>
                 </div>
+                <div className={classes['event-name']}>{MAPPER_EVENTS[data.event] ?? ""}</div>
                 <Event event={data.event}></Event>
             </div>
             <div className={classes['dashboard-presence']}>
@@ -62,6 +70,7 @@ const Dashboard = () => {
                 <div className={classes['eight']}>
                     <h1>Presence</h1>
                 </div>
+                {/* <div className={classes['presence-name']}>{data.pres ? "No presence detected" : "Presence detected"}</div> */}
                 <Presence pres={data.pres}></Presence>
             </div>
             <div className={classes['dashboard-humidity']}>

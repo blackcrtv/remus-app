@@ -96,3 +96,31 @@ body {
   .eight h1:after {
      right:-20px;
   }
+
+  .event-name{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 15%;
+    justify-self: center;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+    font-weight: bold;
+    font-size: 26px;
+    border-radius: 1em;
+    background-color: #cecdb6;
+    padding: 0.5rem 1rem;
+    box-decoration-break: clone;
+  }
+
+  .presence-name{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 10%;
+    justify-self: center;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+    font-weight: bold;
+    font-size: 26px;
+    border-radius: 1em;
+    background-color: #dbdbdb70;
+    padding: 0.5rem 1rem;
+    box-decoration-break: clone;
+  }
