@@ -23,7 +23,10 @@ io.on('connection', (socket) => {
             console.log(data)
             // Process the received data as needed
             const parsedData = processData(data);
-
+            if (!parsedData) {
+                console.log("Error in parsing data")
+                return;
+            }
             // Send the parsed data to the client
             socket.emit('clientData', parsedData);
         });
@@ -61,10 +64,17 @@ const MAPPER_EVENT = {
 }
 
 function processData(data) {
-    let dataJson = JSON.parse(data.toString());
-    return {
-        ...dataJson,
-        event: MAPPER_EVENT[dataJson.event]
+    let dataJson;
+    try {
+        dataJson = JSON.parse(data.toString());
+        return {
+            ...dataJson,
+            event: MAPPER_EVENT[dataJson.event]
+        }
+    } catch (error) {
+        console.log('>>>>>>>>>>> Data is >>>>>>>>>>>>> ' + data);
+        console.log(error);
+        return false;
     }
 }
 
